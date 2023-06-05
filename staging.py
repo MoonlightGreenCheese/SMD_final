@@ -5,7 +5,7 @@ import psycopg2
 
 
 def ReadLoadMetadata1(filepath):
-    files_list = os.listdir(filepath)  # 得到文件夹下的所有文件名称
+    files_list = os.listdir(filepath)  # get file names
 
     tmp1 = []
     tmp2 = []
@@ -164,7 +164,7 @@ def ReadLoadMetadata1(filepath):
 
 
 def ReadLoadData1(filepath):
-    files_list = os.listdir(filepath)  # 得到文件夹下的所有文件名称
+    files_list = os.listdir(filepath)  # get file names
 
     for file in files_list:
         f = pd.read_csv(filepath + "\\" + file, skiprows=27, header=None)
